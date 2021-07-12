@@ -1,0 +1,124 @@
+:root{
+  --very--dark--blue: hsl(233, 47%, 7%); /* (main background) */
+  --dark--blue: hsl(244, 38%, 16%); /* (card background) */
+  --soft-violet: hsl(277, 64%, 61%); /* (accent) */
+  --white: hsl(0, 0%, 100%) ; /*(main heading, stats)*/
+  --white-transparent:hsla(0, 0%, 100%, 0.75); /*main paragraph*/
+  }
+ /* background: linear-gradient(-45deg, #788cff, #b4c8ff); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--white);
+  }
+
+  body {
+    background: var(--dark--blue);
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+.container-parent{
+  display: flex;
+  margin: 100px;
+}
+
+.container {
+  background: var(--very--dark--blue);
+  width: 48%;
+  display: flex;
+}
+
+.card{
+  border-radius: 5px;
+}
+h1 span {
+  color: var(--soft-violet);
+}
+
+.container__content__picture{
+  width: 48%;
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+}
+.container__content__picture img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--soft-violet);
+  opacity: 0.4;
+}
+
+.container__content__text{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container__content__text p{
+  color: var(--white-transparent);
+  font-size: 0.9em;
+}
+
+.container__content__text__text__footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__content__text__text__footer--box span{
+  color: var(--white-transparent);
+  font-size: 0.7em;
+}
+
+.container__content__text__text__footer h3{
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 700px){
+  .container-parent{
+    display: flex;
+    margin: 100px;
+    flex-direction:column-reverse;
+    width: 100%;
+  }
+  .container__content__text{
+    padding: 25px;
+    gap: 30px;
+    text-align: center;
+  }
+  .container {
+    background: var(--very--dark--blue);
+    width: 60%;
+  }
+  .container__content__picture{
+    width: 60%;
+    overflow: hidden;
+    height: 300px;
+  }
+  .container__content__text{
+  text-align: center;
+  }
+  .container__content__text__text__footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
